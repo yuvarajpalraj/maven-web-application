@@ -1,6 +1,9 @@
 node{
 def mavenHome = tool name  : "maven-3.8.5"
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '4')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+echo "job name is: ${env.JOB_NAME}"
+echo "Node name is: ${env.NODE_NAME}"
+echo "Build number is: ${env.BUILD_NUMBER}"
 stage('CheckOutCode')
 {
 git branch: 'development', credentialsId: '76f32731-3d50-42de-89ef-0f7177b66de0', url: 'https://github.com/yuvarajpalraj/maven-web-application.git'

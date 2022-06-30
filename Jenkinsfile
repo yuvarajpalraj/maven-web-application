@@ -16,7 +16,7 @@ stage('Build')
 {
 sh "${mavenHome}/bin/mvn clean package" 
 }
-
+/*
 stage ('ExecuteSonarcubeReport')
 {
 sh "${mavenHome}/bin/mvn sonar:sonar"
@@ -32,7 +32,7 @@ sshagent(['3f9fedbc-6f3e-4b02-94b6-9ddfa871a2aa'])
  sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.37.6:/opt/apache-tomcat-9.0.64/webapps"
 }
 }
-
+*/
 }catch (e) {
     // If there was an exception thrown, the build failed
     currentBuild.result = "FAILED"

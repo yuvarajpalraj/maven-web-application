@@ -43,7 +43,9 @@ sshagent(['3f9fedbc-6f3e-4b02-94b6-9ddfa871a2aa'])
   }
 }
 
-def sendSlackNotifications(String buildStatus = 'STARTED') {
+
+/* 
+ def sendSlackNotifications(String buildStatus = 'STARTED') {
   
   buildStatus =  buildStatus ?: 'SUCCESS'
 
@@ -68,3 +70,4 @@ def sendSlackNotifications(String buildStatus = 'STARTED') {
   // Send notifications
   slackSend (color: colorCode, message: summary, channel: 'devopsstudent')
 }
+*/
